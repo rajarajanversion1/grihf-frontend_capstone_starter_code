@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up</title>
-
-  <link rel="stylesheet" href="./Sign_Up.css" />
+  <link rel="stylesheet" href="./Sign_Up.css">
 </head>
 
 <body>
   <div class="outerbody">
+
     <form class="signup-form">
 
       <h1>Sign Up</h1>
-      <h3>Already a member? <a href="" style="color: blue;">Login</a></h3>
 
-      <!-- Role -->
+      <h3>
+        Already a member?
+        <a href="">Login</a>
+      </h3>
+
       <div class="form-group">
         <label for="role">Role</label>
 
@@ -38,7 +40,7 @@
           name="name"
           placeholder="Enter your full name"
           required
-        />
+        >
       </div>
 
       <div class="form-group">
@@ -49,8 +51,10 @@
           id="phone"
           name="phone"
           placeholder="Enter your phone number"
+          pattern="[0-9]{10}"
+          maxlength="10"
           required
-        />
+        >
       </div>
 
       <div class="form-group">
@@ -61,8 +65,9 @@
           id="email"
           name="email"
           placeholder="Enter your email"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
           required
-        />
+        >
       </div>
 
       <div class="form-group">
@@ -73,18 +78,23 @@
           id="password"
           name="password"
           placeholder="Enter your password"
+          minlength="6"
+          maxlength="16"
+          pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{6,16}$"
           required
-        />
+        >
       </div>
 
       <button type="submit" class="signup-btn">
         Submit
       </button>
 
-      <button type="submit" class="reset-btn">
+      <button type="reset" class="reset-btn">
         Reset
       </button>
+
     </form>
+
   </div>
 </body>
 </html>
